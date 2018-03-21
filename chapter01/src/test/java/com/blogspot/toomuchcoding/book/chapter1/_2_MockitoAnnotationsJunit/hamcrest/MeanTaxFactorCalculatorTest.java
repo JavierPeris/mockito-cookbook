@@ -19,9 +19,11 @@ public class MeanTaxFactorCalculatorTest {
 
     static final double TAX_FACTOR = 10;
 
-    @Mock TaxService taxService;
+    @Mock
+    TaxService taxService;
 
-    @InjectMocks MeanTaxFactorCalculator systemUnderTest;
+    @InjectMocks
+    MeanTaxFactorCalculator systemUnderTest;
 
     @Before
     public void setup() {
@@ -37,7 +39,7 @@ public class MeanTaxFactorCalculatorTest {
         double meanTaxFactor = systemUnderTest.calculateMeanTaxFactorFor(new Person());
 
         // then
-	    assertThat(meanTaxFactor, equalTo(TAX_FACTOR));
+        assertThat(meanTaxFactor, equalTo(TAX_FACTOR));
     }
 
 }
